@@ -48,7 +48,14 @@ const input = (document, path) => {
   })
 }
 
-const genPromise = () => {
+const query = (name) => {
+  const time = Date.now()
+  return mongoClient.find('image', {name}).then(_ => {
+    console.log('query time estimated: ', name, Date.now() - time)
+  })
+}
+
+const test1 = () => {
   let promises = [
     input('image', 'image5.jpg'),
     input('image', 'image1.jpg'),
@@ -57,5 +64,15 @@ const genPromise = () => {
 
   return Promise.all(promises)
 }
-genPromise()
 
+const test2 = () => {
+  let promises = [
+    query('image5.jpg'),
+    query('image1.jpg'),
+    query('image2.jpg'),
+  ]
+
+  return Promise.all(promises)
+}
+
+eval(`test${process.argv[2] || 1}()`)
