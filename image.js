@@ -1,5 +1,5 @@
 const fs = require('fs')
-const mongoClient = require('./mongo')('test')
+const mongoClient = require('nodejs-utils').DB.mongoDB
 
 const read = (path) => {
   return new Promise((resolve, reject) => {

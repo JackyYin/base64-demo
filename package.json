@@ -1,0 +1,23 @@
+{
+  "name": "base64",
+  "version": "1.0.0",
+  "description": "",
+  "main": "image.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JackyYin/base64-demo.git"
+  },
+  "keywords": [],
+  "author": "Jacky Yin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JackyYin/base64-demo/issues"
+  },
+  "homepage": "https://github.com/JackyYin/base64-demo#readme",
+  "dependencies": {
+    "nodejs-utils": "github:JackyYin/nodejs-utils"
+  }
+}
