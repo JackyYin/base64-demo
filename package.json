@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/JackyYin/base64-demo#readme",
   "dependencies": {
-    "nodejs-utils": "github:JackyYin/nodejs-utils"
+    "nodejs-utils": "github:JackyYin/nodejs-utils#1.0.0"
   }
 }
