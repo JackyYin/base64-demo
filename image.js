@@ -25,7 +25,7 @@ const calc = (name, buf) => {
 }
 
 const input = (document, path) => {
-  const start = Date.now()
+  console.time(path)
 
   return read(path).then(buf => {
     return Promise.all([
@@ -43,15 +43,16 @@ const input = (document, path) => {
       return mongoClient.insert(document, [obj], conn)
     })
   }).then(resp => {
-    console.log('total time estimated: ', path, Date.now() - start)
+    console.timeEnd(path)
     return Promise.resolve()
   })
 }
 
 const query = (name) => {
-  const time = Date.now()
+  console.time(name)
+
   return mongoClient.find('image', {name}).then(_ => {
-    console.log('query time estimated: ', name, Date.now() - time)
+    console.timeEnd(name)
   })
 }
 
